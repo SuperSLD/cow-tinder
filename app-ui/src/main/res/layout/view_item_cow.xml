@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cowCard"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:layout_marginTop="16dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:background="@drawable/shape_edit_text"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/twCowId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:layout_marginStart="16dp"
+        android:textColor="@color/colorTextBlack"
+        android:fontFamily="@font/roboto_regular"
+        tools:text="№00000"/>
+
+    <TextView
+        android:id="@+id/tvCowSex"
+        android:layout_width="wrap_content"
+        android:layout_height="27dp"
+        android:textColor="@color/colorTextWhite"
+        android:background="@drawable/shape_cow_sex"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:fontFamily="@font/roboto_regular"
+        android:layout_marginStart="16dp"
+        android:paddingHorizontal="8dp"
+        tools:text="Самка"/>
+
+    <TextView
+        android:id="@+id/twCowBreed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginStart="16dp"
+        android:textColor="@color/colorTextSecondary"
+        android:fontFamily="@font/roboto_regular"
+        tools:text="Герефорд"/>
+
+</LinearLayout>
