@@ -8,7 +8,8 @@
     <LinearLayout
         android:id="@+id/login_content"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:orientation="vertical"
         android:gravity="center"
         android:padding="24dp">
@@ -17,17 +18,7 @@
             android:id="@+id/success_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_looking_out"/>
-
-        <TextView
-            android:id="@+id/success_title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/colorTextPrimary"
-            android:textSize="32sp"
-            android:fontFamily="@font/roboto_bold"
-            android:layout_marginTop="14dp"
-            android:text="@string/login_title"/>
+            android:src="@drawable/check_circle"/>
 
         <TextView
             android:id="@+id/success_subtitle"
@@ -36,17 +27,27 @@
             android:textColor="@color/colorTextPrimary"
             android:textSize="18sp"
             android:fontFamily="@font/roboto_regular"
+            android:gravity="center"
             android:text="@string/login_subtitle"
-            android:layout_marginTop="16dp"/>
+            android:layout_marginTop="16dp"
+            android:layout_marginHorizontal="36dp"/>
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:background="@drawable/shape_back_gradient">
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/success_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/ButtonSolid"
-            android:text="@string/login_button"
-            android:layout_marginTop="46dp"/>
+            style="@style/ButtonWhiteEmpty"
+            android:text="@string/login_button" />
 
     </LinearLayout>
 

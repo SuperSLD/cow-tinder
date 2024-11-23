@@ -14,6 +14,7 @@ class CowRetrofitRepository(
 ): CowNetRepository {
 
     private val service by lazy { retrofit.create(CowRetrofitService::class.java) }
+
     override suspend fun getAllCows(): List<Cow> {
         sleep(1000)
         return listOf(

@@ -2,19 +2,18 @@ package com.example.app_ui.screens.success
 
 import com.example.app_ui.common.AppScreen
 
-class SuccessScreen(
-    val titleRes: Int,
+class InstructionScreen(
     val subtitleRes: Int,
     val iconRes: Int,
     val buttonRes: Int,
-    val nextAction: SuccessNextAction,
+    val nextAction: InstructionNextAction,
     val nextScreen: AppScreen? = null,
 ) : AppScreen() {
 
-    override fun getFragment() = SuccessFragment.newInstance(this)
+    override fun getFragment() = InstructionFragment.newInstance(this)
 }
 
-enum class SuccessNextAction{
+enum class InstructionNextAction{
     NEXT,
     ROOT,
     BACK,
