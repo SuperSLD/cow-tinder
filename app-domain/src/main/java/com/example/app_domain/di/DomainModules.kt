@@ -6,6 +6,9 @@ import com.example.app_domain.controllers.NavigationController
 import com.example.app_domain.controllers.PointTypeController
 import com.example.app_domain.controllers.SelectMarkerController
 import com.example.app_domain.controllers.SelectRoomController
+import com.example.app_domain.usecases.cow.FindCowByTagUseCase
+import com.example.app_domain.usecases.cow.FindCowPairUseCase
+import com.example.app_domain.usecases.cow.GetAllCowsUseCase
 import com.example.app_domain.usecases.user.GetPinCodeUseCase
 import com.example.app_domain.usecases.user.GetProfileUseCase
 import com.example.app_domain.usecases.user.IsAuthUseCase
@@ -22,6 +25,9 @@ fun Module.provideDomainModules() {
     single { GetPinCodeUseCase(get()) }
     single { SetPinCodeUseCase(get()) }
     single { GetProfileUseCase(get()) }
+    single { GetAllCowsUseCase(get()) }
+    single { FindCowPairUseCase(get()) }
+    single { FindCowByTagUseCase(get()) }
 }
 
 fun Module.provideControllers() {
