@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#454B6A</color>
+    <color name="colorPrimarySecondary">#16545E</color>
+    <color name="colorBack">#FFFFFF</color>
+    <color name="colorBackSecondary">#F1F3F8</color>
+    <color name="colorBorder">#E6EBF0</color>
+    <color name="colorBackgroundBlack">#3E3E3E</color>
+
+    <color name="colorTextPrimary">#292929</color>
+    <color name="colorTextSecondary">#C9D0E3</color>
+    <color name="colorTextWhite">#FFFFFF</color>
+    <color name="colorTextBlack">#000000</color>
+    <color name="colorTextBlackSecondary">#C9D0E3</color>
+    <color name="colorTextSubtitle">#A5A5A5</color>
+
+    <color name="colorStatusBar">#0023213C</color>
+    <color name="colorNavigationBar">#001F1A39</color>
+
+    <color name="colorShadow">#DAE0EE</color>
+
+    <color name="colorAlertRed">#FF5F5F</color>
+    <color name="colorPositiveGreen">#7BCB8C</color>
+
+
+    <color name="colorProgressBar2">#FF621E</color>
+    <color name="colorProgressBar3">#726AD1</color>
+    <color name="colorProgressBar4">#493DC7</color>
+
+    <color name="negativeButtonTextColor">#FB5020</color>
+    <color name="colorPositiveMemberStatus">#BEFF7D</color>
+
+    <color name="colorCardItemBackground">#3B5771</color>
+</resources>

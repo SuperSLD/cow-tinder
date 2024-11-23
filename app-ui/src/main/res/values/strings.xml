@@ -1,0 +1,126 @@
+<resources>
+    <string name="app_name">Книжная полка</string>
+
+    <!-- Авторизация -->
+    <string name="login_title">Вход на ферму</string>
+    <string name="login_subtitle">Введите логин, чтобы начать работу</string>
+    <string name="login_hint">Логин</string>
+    <string name="password_hint">Пароль</string>
+    <string name="login_button">Далее</string>
+
+    <!--Регистрация-->
+    <string name="registration_title">Регистрация</string>
+    <string name="registration_subtitle">Давайте знакомиться! Расскажите нам о себе, чтобы начать читать</string>
+    <string name="name_hint">Имя</string>
+    <string name="lastname_hint">Фамилия</string>
+    <string name="mid_name_hint">Отчество</string>
+    <string name="avatar_hint">Ссылка на аватар</string>
+    <string name="registration_button">Создать профиль</string>
+
+    <string name="pin_code_title">Введите пин-код</string>
+    <string name="pin_code_create_title">Придумайте пин-код</string>
+    <string name="pin_code_repeat_title">Повторите пин-код</string>
+
+    <string name="pin_success_title">Все отлично!</string>
+    <string name="pin_success_subtitle">Добро пожаловать в библиотеку, желаем приятного чтения</string>
+    <string name="pin_success_button">Дальше</string>
+
+    <!-- Главная -->
+    <string name="tab_documents">Мои книги</string>
+    <string name="tab_chlellenges">Клубы</string>
+    <string name="tab_central">Главная</string>
+    <string name="tab_education">Квесты</string>
+    <string name="tab_profile">Профиль</string>
+
+    <string name="central_title">Доброе утро</string>
+    <string name="central_subtitle">Сегодня вас ждет продуктивный день</string>
+    <string name="central_birthday">Дни рождения</string>
+    <string name="central_new_people">Новенькие</string>
+    <string name="central_ideas">Идеи</string>
+    <string name="central_new_courses">Новые курсы</string>
+    <string name="central_coins">У вас %1$s баллов</string>
+    <string name="central_coins_subtitle">Посмотрите на что вы их\nможете потратить</string>
+    <string name="central_challenges">Примите участие\nв клубах\nпо интересам</string>
+    <string name="central_news_title">Новости</string>
+    <string name="central_news_button">Больше новостей</string>
+
+    <string name="books_title">Мои книги</string>
+    <string name="documents_requests">Заявления</string>
+    <string name="documents_deadline">Срок %1$s</string>
+    <string name="documents_need_sign">Нужна подпись</string>
+    <string name="documents_request_finish_title">Готово!</string>
+    <string name="documents_request_finish_subtitle">Заявление отправлено.\nСкоро готовые документы придут на подпись.</string>
+    <string name="documents_request_finish_button">Хорошо</string>
+    <string name="documents_open">Ознакомиться с документом</string>
+    <string name="documents_detail">Внимательно ознакомьтесь с документом перед тем как его подписывать</string>
+    <string name="documents_sign">Подписать</string>
+
+
+    <string name="education_title">Квесты</string>
+    <string name="education_new">Новое</string>
+    <string name="education_important">Важное</string>
+    <string name="course_count_checks">Пунктов\nвыполнено</string>
+    <string name="course_count_lessons">Уроков\nпройдено</string>
+    <string name="course_count_lesson_count">%1$d вопросов</string>
+    <string name="course_check_item_check_button">Пометить как выполненный</string>
+    <string name="course_check_item_back_button">Назад</string>
+    <string name="lesson_success">Урок пройден!</string>
+    <string name="lesson_success_count">Правильных\nответов</string>
+    <string name="lesson_failed">Урок не пройден</string>
+    <string name="lesson_failed_count">Количество\nошибок</string>
+    <string name="lesson_finish_button">Вернуться к курсу</string>
+
+    <string name="profile_ideas">Уведомления</string>
+    <string name="profile_ideas_answer">Ответ:</string>
+
+    <string name="achivments_title">Достижения</string>
+    <string name="achivments_info">Получи все\nдостижения и\nзаработай награду</string>
+
+    <!-- Новости  -->
+    <string name="news_can_subscribe">Можно записаться</string>
+    <string name="news_subscribe_button">Записаться</string>
+    <string name="news_need_subscribe">Для участия нужно записаться</string>
+    <string name="news_event_date_text">Дата проведения:</string>
+
+    <string name="success_subscribe_add_to_calendar">Добавить в календарь</string>
+    <string name="success_description">Вы записались на мероприятие! Мы отправим вам напоминание ближе к дате начала</string>
+
+    <!-- Книги   -->
+    <string name="book_order">Забронировать</string>
+    <string name="book_renewal">Продлить</string>
+    <string name="book_auto_renewal">Продлить</string>
+    <string name="book_switch_text">Включить авто продление</string>
+
+    <!-- Map -->
+    <string name="roadmap_navigation_error">Не удалось построить маршрут</string>
+    <string name="roadmap_navigation">Построить маршрут</string>
+    <string name="roadmap_steps">Пройти по шагам</string>
+    <string name="roadmap_time">%1$s минут в пути</string>
+    <string name="roadmap_distance">%1$s км.</string>
+    <string name="roadmap_search_room">Название места</string>
+
+    <string name="roadmap_steps_previous">Назад</string>
+    <string name="roadmap_steps_next">Далее</string>
+    <string name="roadmap_steps_finish">Завершить</string>
+
+
+    <string name="marker_info_done">Выбрано</string>
+    <string name="select_point_done">Готово</string>
+    <string name="select_room_back">Назад</string>
+
+    <string name="nav_title">Поиск маршрута</string>
+    <string name="nav_desk">Вы можете построить маршрут по карте, прямо до нужного вам места</string>
+    <string name="nav_a_title">Начало пути</string>
+    <string name="nav_a_desk">Выберите начало маршрута</string>
+    <string name="nav_b_title">Пункт назначения</string>
+    <string name="nav_b_desk">Выберите пункт назначения</string>
+
+    <string name="point_type_title">Добавление точки</string>
+    <string name="point_type_map">Точка на карте</string>
+    <string name="point_type_room">Место в библиотеке из списка</string>
+    <string name="point_type_qr">QR код</string>
+
+    <string name="sections_title">Клубы по интересам</string>
+    <string name="sections_link_button">Пройти по ссылке</string>
+
+</resources>
