@@ -5,6 +5,7 @@ import com.example.app_domain.usecases.user.LoginUseCase
 import com.example.app_ui.common.core.base.launchUI
 import com.example.app_ui.common.core.base.withIO
 import com.example.app_ui.ext.createHandler
+import com.example.app_ui.screens.home.HomeScreen
 import com.example.app_ui.screens.main.FlowMainScreen
 import online.jutter.supersld.common.base.BasePresenter
 import org.koin.core.inject
@@ -20,11 +21,11 @@ class LoginPresenter : BasePresenter<LoginView>() {
             viewState.toggleLoading(false)
         }) {
             viewState.toggleLoading(true)
-            router?.navigateTo(FlowMainScreen())
-            val authResponse = withIO { loginUseCase(login, password) }
-            if (!authResponse.token.isNullOrEmpty()) {
-                router?.navigateTo(FlowMainScreen())
-            }
+            router?.navigateTo(HomeScreen())
+//            val authResponse = withIO { loginUseCase(login, password) }
+//            if (!authResponse.token.isNullOrEmpty()) {
+//                router?.navigateTo(HomeScreen())
+//            }
         }
     }
 
