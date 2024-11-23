@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Книжная полка</string>
+    <string name="app_name">Моя ферма</string>
 
     <!-- Авторизация -->
     <string name="login_title">Вход на ферму</string>
@@ -15,7 +15,6 @@
     <string name="home_process_cow_info">Поиск коровы/быка</string>
     <string name="home_process_cow_sex">Подбор пары</string>
     <string name="home_process_cow_inventory">Проверка стада</string>
-
 
     <!-- Все что ниже удалить -->
     
