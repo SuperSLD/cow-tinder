@@ -8,30 +8,33 @@ import com.arellomobile.mvp.presenter.ProvidePresenter
 import com.example.app_ui.R
 import com.example.app_ui.common.ARG_KEY_SCREEN_PARAMS
 import com.example.app_ui.common.core.base.BaseFragment
+import com.example.app_ui.common.core.base.addSystemBottomPadding
 import com.example.app_ui.ext.getDrawable
-import kotlinx.android.synthetic.main.fragment_success.success_button
-import kotlinx.android.synthetic.main.fragment_success.success_icon
-import kotlinx.android.synthetic.main.fragment_success.success_subtitle
-import kotlinx.android.synthetic.main.fragment_success.success_title
+import kotlinx.android.synthetic.main.fragment_instruction.buttonsContainer
+import kotlinx.android.synthetic.main.fragment_instruction.success_button
+import kotlinx.android.synthetic.main.fragment_instruction.success_icon
+import kotlinx.android.synthetic.main.fragment_instruction.success_subtitle
 
-class SuccessFragment : BaseFragment(R.layout.fragment_success), SuccessView {
+class InstructionFragment : BaseFragment(R.layout.fragment_instruction), InstructionView {
 
     companion object {
-        fun newInstance(screen: SuccessScreen) = SuccessFragment().apply {
+        fun newInstance(screen: InstructionScreen) = InstructionFragment().apply {
             arguments = bundleOf(ARG_KEY_SCREEN_PARAMS to screen)
         }
     }
 
     @InjectPresenter
-    lateinit var presenter: SuccessPresenter
+    lateinit var presenter: InstructionPresenter
 
     @ProvidePresenter
-    fun providePresenter() = SuccessPresenter(
-        requireArguments().getSerializable(ARG_KEY_SCREEN_PARAMS) as SuccessScreen,
+    fun providePresenter() = InstructionPresenter(
+        requireArguments().getSerializable(ARG_KEY_SCREEN_PARAMS) as InstructionScreen,
     )
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        buttonsContainer.addSystemBottomPadding()
 
         success_button.setOnClickListener {
             presenter.onConfirm()
@@ -42,9 +45,8 @@ class SuccessFragment : BaseFragment(R.layout.fragment_success), SuccessView {
         presenter.onBack()
     }
 
-    override fun setContent(title: Int, subtitle: Int, icon: Int, buttonTitle: Int) {
+    override fun setContent(subtitle: Int, icon: Int, buttonTitle: Int) {
         success_icon.setImageDrawable(getDrawable(icon))
-        success_title.setText(title)
         success_subtitle.setText(subtitle)
         success_button.setText(buttonTitle)
     }

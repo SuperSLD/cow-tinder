@@ -16,6 +16,29 @@
     <string name="home_process_cow_sex">Подбор пары</string>
     <string name="home_process_cow_inventory">Проверка стада</string>
 
+    <!-- Поиск по тегу -->
+    <string name="search_by_tag_title">Поиск коровы/быка</string>
+    <string name="search_by_tag_id_text">Найдите на ухе коровы/быка бирку и запишите номер.</string>
+    <string name="search_by_tag_id_text_hint">Тег на бирке</string>
+    <string name="search_by_tag_rfid_text">Найдите на ухе коровы/быка бирку и наведите на нее сканер, затем нажмите кнопку поиск.</string>
+    <string name="search_by_tag_id">Тег</string>
+    <string name="search_by_tag_rfid">RFID</string>
+    <string name="search_by_tag_button">Поиск</string>
+    <string name="search_by_tag_button_scan">Сканировать</string>
+
+    <!-- Карточка коровы -->
+    <string name="cow_card_number">Номер</string>
+    <string name="cow_card_gender">Пол</string>
+    <string name="cow_card_poroda">Порода</string>
+    <string name="cow_card_weight">Упитанность</string>
+    <string name="cow_card_milk">Удой л/день</string>
+    <string name="cow_card_health">Здоровье</string>
+    <string name="cow_card_fertility">Фертильность</string>
+    <string name="cow_card_birthday">Дата рожденияи</string>
+    <string name="cow_card_button_done">Готово</string>
+    <string name="cow_card_button_next">Далее</string>
+    <string name="cow_card_button_upload">Выгрузить</string>
+
     <!-- Все что ниже удалить -->
     
     <!--Регистрация-->

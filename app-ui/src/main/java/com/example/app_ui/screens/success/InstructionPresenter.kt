@@ -4,15 +4,14 @@ import com.arellomobile.mvp.InjectViewState
 import online.jutter.supersld.common.base.BasePresenter
 
 @InjectViewState
-class SuccessPresenter(
-    private val params: SuccessScreen,
-) : BasePresenter<SuccessView>() {
+class InstructionPresenter(
+    private val params: InstructionScreen,
+) : BasePresenter<InstructionView>() {
 
     override fun onFirstViewAttach() {
         super.onFirstViewAttach()
 
         viewState.setContent(
-            title = params.titleRes,
             subtitle = params.subtitleRes,
             buttonTitle = params.buttonRes,
             icon = params.iconRes,
@@ -21,13 +20,13 @@ class SuccessPresenter(
 
     fun onConfirm() {
         when(params.nextAction) {
-            SuccessNextAction.NEXT -> {
+            InstructionNextAction.NEXT -> {
                 router?.navigateTo(params.nextScreen!!)
             }
-            SuccessNextAction.BACK -> {
+            InstructionNextAction.BACK -> {
                 router?.exit()
             }
-            SuccessNextAction.ROOT -> {
+            InstructionNextAction.ROOT -> {
                 router?.newRootScreen(params.nextScreen!!)
             }
         }

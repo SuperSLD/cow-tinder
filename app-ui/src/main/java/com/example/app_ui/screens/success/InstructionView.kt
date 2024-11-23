@@ -4,8 +4,8 @@ import com.arellomobile.mvp.MvpView
 import com.arellomobile.mvp.viewstate.strategy.AddToEndSingleStrategy
 import com.arellomobile.mvp.viewstate.strategy.StateStrategyType
 
-interface SuccessView : MvpView {
+interface InstructionView : MvpView {
 
     @StateStrategyType(AddToEndSingleStrategy::class)
-    fun setContent(title: Int, subtitle: Int, icon: Int, buttonTitle: Int)
+    fun setContent(subtitle: Int, icon: Int, buttonTitle: Int)
 }
