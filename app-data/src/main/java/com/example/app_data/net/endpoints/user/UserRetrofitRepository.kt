@@ -11,18 +11,9 @@ class UserRetrofitRepository(
 
     private val service by lazy { retrofit.create(UserRetrofitService::class.java) }
 
-    override suspend fun login(login: String): AuthResponse {
+    override suspend fun login(login: String, password: String): AuthResponse {
         return service.login(LoginRequest(login)).dataOrThrow()!!
     }
-
-    override suspend fun register(
-        login: String,
-        name: String,
-        lastName: String,
-        midName: String,
-        avatar: String?
-    ): String? =
-        service.register(RegistrationRequest(login, name, lastName, midName, avatar)).dataOrThrow()!!.token
 
 
     override suspend fun getInfo(): User {
