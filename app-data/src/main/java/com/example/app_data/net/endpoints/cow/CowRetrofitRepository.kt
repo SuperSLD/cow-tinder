@@ -7,7 +7,6 @@ import com.example.app_domain.models.cow.CowPairResult
 import com.example.app_domain.models.cow.WaitedCowData
 import retrofit2.Retrofit
 import java.lang.Thread.sleep
-import kotlin.concurrent.thread
 
 class CowRetrofitRepository(
     retrofit: Retrofit
@@ -16,8 +15,7 @@ class CowRetrofitRepository(
     private val service by lazy { retrofit.create(CowRetrofitService::class.java) }
 
     override suspend fun getAllCows(): List<Cow> {
-        sleep(1000)
-        return listOf(
+        val list = listOf(
             createMockCow(),
             createMockCow(),
             createMockCow(),
@@ -26,6 +24,8 @@ class CowRetrofitRepository(
             createMockCow(),
             createMockCow(),
         )
+        sleep(1000)
+        return list
     }
 
     override suspend fun getCowInfo(id: String): Cow {

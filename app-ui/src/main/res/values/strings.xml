@@ -34,10 +34,17 @@
     <string name="cow_card_milk">Удой л/день</string>
     <string name="cow_card_health">Здоровье</string>
     <string name="cow_card_fertility">Фертильность</string>
-    <string name="cow_card_birthday">Дата рожденияи</string>
+    <string name="cow_card_birthday">Дата рождения</string>
     <string name="cow_card_button_done">Готово</string>
     <string name="cow_card_button_next">Далее</string>
     <string name="cow_card_button_upload">Выгрузить</string>
+
+    <!-- Поиск коровы для спаривания -->
+    <string name="search_couple_title">Поиск коровы/быка</string>
+    <string name="search_couple_hint">Номер коровы/быка</string>
+
+    <!-- Подтверждение партнера -->
+    <string name="confirm_partner_screen_title">Отсканируйте метку на корове, чтобы подтвердить ее данные</string>
 
     <!-- Все что ниже удалить -->
     

@@ -1,6 +1,7 @@
 package com.example.app_ui.screens.home
 
 import com.arellomobile.mvp.InjectViewState
+import com.example.app_ui.screens.search_couple.SearchCoupleScreen
 import com.example.app_ui.screens.searchbytag.SearchByTagScreen
 import online.jutter.supersld.common.base.BasePresenter
 
@@ -15,9 +16,7 @@ class HomePresenter : BasePresenter<HomeView>() {
         router?.navigateTo(SearchByTagScreen())
     }
 
-    fun onOpenCowSexProcess() {
-
-    }
+    fun onOpenCowSexProcess() = router?.navigateTo(SearchCoupleScreen())
 
     fun onOpenCowInventoryProcess() {
 
