@@ -10,6 +10,7 @@ import com.example.app_domain.models.cow.Cow
 import com.example.app_ui.R
 import com.example.app_ui.common.ARG_KEY_SCREEN_PARAMS
 import com.example.app_ui.common.core.base.BaseFragment
+import com.example.app_ui.common.core.base.addSystemTopAndBottomPadding
 import com.example.app_ui.common.core.base.addSystemTopPadding
 import kotlinx.android.synthetic.main.fragment_cow_card.actionButton
 import kotlinx.android.synthetic.main.fragment_cow_card.backArrow
@@ -41,7 +42,7 @@ class CowCardFragment : BaseFragment(R.layout.fragment_cow_card), CowCardView {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        mainContainer.addSystemTopPadding()
+        mainContainer.addSystemTopAndBottomPadding()
         backArrow.setOnClickListener { onBackPressed() }
         actionButton.setOnClickListener { presenter.onButtonClick() }
     }
