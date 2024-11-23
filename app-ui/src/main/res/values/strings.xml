@@ -8,6 +8,17 @@
     <string name="password_hint">Пароль</string>
     <string name="login_button">Далее</string>
 
+    <!-- Главная -->
+    <string name="home_tasks_title">Задачи на сегодня</string>
+    <string name="home_process_title">Процессы фермы</string>
+    <string name="home_process_new_cow">Новая корова</string>
+    <string name="home_process_cow_info">Поиск коровы/быка</string>
+    <string name="home_process_cow_sex">Подбор пары</string>
+    <string name="home_process_cow_inventory">Проверка стада</string>
+
+
+    <!-- Все что ниже удалить -->
+    
     <!--Регистрация-->
     <string name="registration_title">Регистрация</string>
     <string name="registration_subtitle">Давайте знакомиться! Расскажите нам о себе, чтобы начать читать</string>
