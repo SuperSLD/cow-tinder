@@ -2,6 +2,7 @@ package com.example.app_ui.screens.searchbytag
 
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import com.arellomobile.mvp.presenter.InjectPresenter
 import com.example.app_ui.R
 import com.example.app_ui.common.core.base.BaseFragment
@@ -70,5 +71,9 @@ class SearchByTagFragment : BaseFragment(R.layout.fragment_search_by_tag), Searc
             textScan.setText(R.string.search_by_tag_rfid_text)
             searchScanButton.setText(R.string.search_by_tag_button_scan)
         }
+    }
+
+    override fun showErrorToast(text: String) {
+        Toast.makeText(context, text, Toast.LENGTH_SHORT).show()
     }
 }

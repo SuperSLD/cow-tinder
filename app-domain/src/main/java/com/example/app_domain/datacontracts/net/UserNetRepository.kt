@@ -5,7 +5,7 @@ import com.example.app_domain.models.user.User
 
 interface UserNetRepository {
 
-    suspend fun login(login: String, password: String): AuthResponse
+    suspend fun login(login: String, password: String): String
 
     suspend fun getInfo(): User
 }

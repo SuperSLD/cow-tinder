@@ -11,4 +11,7 @@ interface SearchByTagView : MvpView {
     fun toggleLoading(show: Boolean)
 
     fun changeType(isTag: Boolean)
+
+    @StateStrategyType(SkipStrategy::class)
+    fun showErrorToast(text: String)
 }

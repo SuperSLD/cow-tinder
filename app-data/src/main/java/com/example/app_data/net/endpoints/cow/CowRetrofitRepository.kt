@@ -15,22 +15,11 @@ class CowRetrofitRepository(
     private val service by lazy { retrofit.create(CowRetrofitService::class.java) }
 
     override suspend fun getAllCows(): List<Cow> {
-        val list = listOf(
-            createMockCow(),
-            createMockCow(),
-            createMockCow(),
-            createMockCow(),
-            createMockCow(),
-            createMockCow(),
-            createMockCow(),
-        )
-        sleep(1000)
-        return list
+        return service.allCows().dataOrThrow() ?: error("Пусто")
     }
 
     override suspend fun getCowInfo(id: String): Cow {
-        sleep(1000)
-        return createMockCow()
+        return service.findCow(id).dataOrThrow() ?: error("Не найдено")
     }
 
     override suspend fun findPair(id: String, findParams: CowPairData): CowPairResult {
