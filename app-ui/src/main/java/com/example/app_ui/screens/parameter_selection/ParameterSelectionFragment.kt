@@ -47,11 +47,11 @@ class ParameterSelectionFragment: BaseFragment(R.layout.fragment_parameter_selec
                     getString(R.string.parameter_selection_health)
                 ),
                 params = JTHorizontalSwitch.JTSwitchParams(
-                    textColorDefault = "#FFFFFF",
-                    textColorSelected = "#000000",
+                    textColorDefault = "#000000",
+                    textColorSelected = "#FFFFFF",
                     corners = 0,
-                    borderColor = "#FFFFFF",
-                    backColorSelected = "#FFFFFF",
+                    borderColor = "#000000",
+                    backColorSelected = "#000000",
                     backColor = "#00FFFFFF",
                 )
             )
