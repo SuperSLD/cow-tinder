@@ -18,7 +18,7 @@ import online.juter.supersld.view.input.selectors.JTHorizontalSwitch
 class ParameterSelectionFragment: BaseFragment(R.layout.fragment_parameter_selection), ParameterSelectionView {
 
     companion object {
-        fun newInstance(screen: ParameterSelectionScreen) = CowCardFragment().apply {
+        fun newInstance(screen: ParameterSelectionScreen) = ParameterSelectionFragment().apply {
             arguments = bundleOf(ARG_KEY_SCREEN_PARAMS to screen)
         }
     }
