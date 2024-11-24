@@ -4,6 +4,7 @@ import com.arellomobile.mvp.InjectViewState
 import com.example.app_domain.usecases.cow.FindCowByTagUseCase
 import com.example.app_ui.common.core.base.launchUI
 import com.example.app_ui.common.core.base.withIO
+import com.example.app_ui.ext.createHandler
 import com.example.app_ui.screens.cowcard.CowCardNextAction
 import com.example.app_ui.screens.cowcard.CowCardScreen
 import online.jutter.supersld.common.base.BasePresenter
@@ -23,7 +24,10 @@ class SearchByTagPresenter : BasePresenter<SearchByTagView>() {
 
     fun searchByTag(tag: String) {
         if (currentType == 0 && tag.isNotBlank()) {
-            launchUI {
+            launchUI(createHandler {
+                viewState.showErrorToast(it.message!!)
+                viewState.toggleLoading(false)
+            }) {
                 viewState.toggleLoading(true)
                 val cow = withIO { findCowByTagUseCase(tag) }
                 viewState.toggleLoading(false)

@@ -3,42 +3,42 @@ package com.example.app_domain.models.cow
 import com.fasterxml.jackson.annotation.JsonProperty
 
 data class Cow(
-    @JsonProperty("id")
+    //@JsonProperty("id")
     val id: String,
 
-    @JsonProperty("sex")
+    //@JsonProperty("sex")
     val sex: String,
 
-    @JsonProperty("breed")
+    //@JsonProperty("breed")
     val breed: String,
 
-    @JsonProperty("birth_date")
+    //@JsonProperty("birth_date")
     val birthDate: String,
 
-    @JsonProperty("papa")
+    //@JsonProperty("papa")
     val papa: String,
 
-    @JsonProperty("mama")
+    //@JsonProperty("mama")
     val mama: String,
 
-    @JsonProperty("milk_volume")
+    //@JsonProperty("milk_volume")
     val milkVolume: String,
 
-    @JsonProperty("meat_volume")
+    //@JsonProperty("meat_volume")
     val meatVolume: String,
 
-    @JsonProperty("inbreeding")
+    //@JsonProperty("inbreeding")
     val inbreeding: String,
 
-    @JsonProperty("meat_increment")
+    //@JsonProperty("meat_increment")
     val meatIncrement: String,
 
-    @JsonProperty("health")
+    //@JsonProperty("health")
     val health: String,
 
-    @JsonProperty("fertility")
+    //@JsonProperty("fertility")
     val fertility: String,
 
-    @JsonProperty("genetic_value")
+    //@JsonProperty("genetic_value")
     val geneticValue: String
 )

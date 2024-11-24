@@ -2,6 +2,7 @@ package com.example.app_data.net.endpoints.user
 
 data class LoginRequest(
     val login: String,
+    val password: String,
 )
 
 data class RegistrationRequest(

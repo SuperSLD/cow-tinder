@@ -10,9 +10,9 @@ class LoginUseCase(
     private val configRepository: ConfigRepository,
 ) {
 
-    suspend operator fun invoke(login: String, password: String): AuthResponse {
+    suspend operator fun invoke(login: String, password: String): String {
         val authResponse = userNetRepository.login(login, password)
-        authResponse.token?.let {  configRepository.putValue(ConfigKey.AUTH_TOKEN, authResponse.token) }
+        configRepository.putValue(ConfigKey.AUTH_TOKEN, authResponse)
         return authResponse
     }
 }

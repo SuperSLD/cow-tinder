@@ -10,7 +10,7 @@ import retrofit2.http.POST
 interface UserRetrofitService {
 
     @POST("auth/login")
-    suspend fun login(@Body request: LoginRequest): DataWrapper<AuthResponse>
+    suspend fun login(@Body request: LoginRequest): DataWrapper<String>
 
     @POST("auth/register")
     suspend fun register(@Body request: RegistrationRequest): DataWrapper<AuthResponse>
