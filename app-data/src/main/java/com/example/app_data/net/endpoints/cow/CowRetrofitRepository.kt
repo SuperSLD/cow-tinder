@@ -22,17 +22,8 @@ class CowRetrofitRepository(
         return service.findCow(id).dataOrThrow() ?: error("Не найдено")
     }
 
-    override suspend fun findPair(id: String, findParams: CowPairData): CowPairResult {
-        sleep(1000)
-        return CowPairResult(
-            otherCow = createMockCow(),
-            waitedCowData = WaitedCowData(
-                milk = 37.47F,
-                weight = 5F,
-                health = 8F,
-                fertility = 79F,
-            )
-        )
+    override suspend fun findPair(id: String, findParams: CowPairData): List<CowPairResult> {
+        return service.findPair(findParams).dataOrThrow() ?: error("Ошибка")
     }
 }
 

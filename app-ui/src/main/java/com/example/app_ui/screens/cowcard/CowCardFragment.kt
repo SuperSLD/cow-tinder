@@ -57,7 +57,7 @@ class CowCardFragment : BaseFragment(R.layout.fragment_cow_card), CowCardView {
         cowGender.text = cow.sex
         cowPoroda.text = cow.breed
         cowWeight.text = cow.meatVolume
-        cowMilk.text = cow.milkVolume + " л."
+        cowMilk.text = if (cow.milkVolume.isBlank()) "---" else cow.milkVolume + " л."
         cowHealth.text = cow.health
         cowFertility.text = cow.fertility + "%"
         cowBirthday.text = cow.birthDate
