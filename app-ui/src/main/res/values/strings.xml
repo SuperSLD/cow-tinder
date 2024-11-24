@@ -46,6 +46,15 @@
     <!-- Подтверждение партнера -->
     <string name="confirm_partner_screen_title">Отсканируйте метку на корове, чтобы подтвердить ее данные</string>
 
+    <!-- Карточка партнера -->
+    <string name="pair_cow_card_title">Паспорт подходящей особи</string>
+    <string name="pair_cow_card_result">Ожидаемый результат\nскрещивания</string>
+    <string name="pair_cow_card_button">Провести скрещивание</string>
+
+    <!-- Финиш скрешивания -->
+    <string name="finish_pair_text">Все готово, данные занесены в систему.</string>
+    <string name="finish_pair_button">Завершить</string>
+
     <!-- Все что ниже удалить -->
     
     <!--Регистрация-->
