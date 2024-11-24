@@ -4,7 +4,7 @@ import com.example.app_domain.models.cow.Cow
 import com.example.app_domain.models.cow.CowPairResult
 import com.example.app_ui.common.AppScreen
 
-class CowCardScreen(
+class PairCowCardScreen(
     val cowPairResult: CowPairResult,
 ) : AppScreen() {
 

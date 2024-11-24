@@ -5,15 +5,7 @@ import com.example.app_ui.common.AppScreen
 
 class BestPartnerScreen(
     val cowPairResultList: List<CowPairResult>,
-    val nextAction: BestPartnerNextAction,
-    val nextScreen: AppScreen? = null,
 ): AppScreen() {
 
     override fun getFragment() = BestPartnersFragment.newInstance(this)
-
-    enum class BestPartnerNextAction{
-        NEXT,
-        ROOT,
-        BACK,
-    }
 }

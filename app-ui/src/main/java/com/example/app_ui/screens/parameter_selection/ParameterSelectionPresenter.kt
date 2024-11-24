@@ -38,8 +38,6 @@ class ParameterSelectionPresenter(
             router?.navigateTo(
                 BestPartnerScreen(
                     cowPairResultList = answer,
-                    nextAction = BestPartnerScreen.BestPartnerNextAction.NEXT,
-                    nextScreen = null
                 )
             )
         }

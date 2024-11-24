@@ -30,7 +30,7 @@ import kotlinx.android.synthetic.main.fragment_pair_cow_card.mainContainer
 class PairCowCardFragment : BaseFragment(R.layout.fragment_pair_cow_card), PairCowCardView {
 
     companion object {
-        fun newInstance(screen: CowCardScreen) = PairCowCardFragment().apply {
+        fun newInstance(screen: PairCowCardScreen) = PairCowCardFragment().apply {
             arguments = bundleOf(ARG_KEY_SCREEN_PARAMS to screen)
         }
     }
@@ -40,7 +40,7 @@ class PairCowCardFragment : BaseFragment(R.layout.fragment_pair_cow_card), PairC
 
     @ProvidePresenter
     fun providePresenter() = PairCowCardPresenter(
-        requireArguments().getSerializable(ARG_KEY_SCREEN_PARAMS) as CowCardScreen,
+        requireArguments().getSerializable(ARG_KEY_SCREEN_PARAMS) as PairCowCardScreen,
     )
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

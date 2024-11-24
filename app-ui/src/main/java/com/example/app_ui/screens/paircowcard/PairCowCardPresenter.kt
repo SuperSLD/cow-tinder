@@ -11,7 +11,7 @@ import online.jutter.supersld.common.base.BasePresenter
 
 @InjectViewState
 class PairCowCardPresenter(
-    private val params: CowCardScreen,
+    private val params: PairCowCardScreen,
 ) : BasePresenter<PairCowCardView>() {
 
     override fun attachView(view: PairCowCardView?) {
