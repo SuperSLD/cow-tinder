@@ -1,57 +1,152 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/mainContainer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/backArrow"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_arrow_back"
-        android:layout_margin="24dp"
-        android:foregroundTint="#3F5C47"/>
-
-
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="16dp"
-        android:textSize="18sp"
-        android:textColor="@color/colorTextBlack"
-        android:text="@string/parameter_selection_text"/>
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
 
-    <online.juter.supersld.view.input.selectors.JTHorizontalSwitch
-        android:id="@+id/selectParameterSwitch"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"/>
 
-    <com.google.android.material.slider.Slider
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:valueFrom="0.0"
-        android:valueTo="21.0" />
+        <ImageView
+            android:id="@+id/backArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:foregroundTint="#3F5C47"
+            android:src="@drawable/ic_arrow_back" />
 
-    <com.google.android.material.slider.Slider
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:valueFrom="0.0"
-        android:valueTo="21.0" />
 
-    <com.google.android.material.slider.Slider
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:valueFrom="0.0"
-        android:valueTo="21.0" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:text="@string/parameter_selection_text"
+            android:textColor="@color/colorTextBlack"
+            android:textSize="18sp" />
+
+        <online.juter.supersld.view.input.selectors.JTHorizontalSwitch
+            android:id="@+id/selectParameterSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:background="@drawable/shape_border"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/parameter_selection_milkVolume"
+                android:textColor="@color/colorTextBlack"
+                android:textSize="18sp" />
+
+            <com.google.android.material.slider.RangeSlider
+                android:id="@+id/cow_milk_volume"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:valueFrom="20.0"
+                android:valueTo="39.0"
+                app:thumbColor="@color/colorSlider"
+                app:thumbStrokeColor="@color/colorSlider"
+                app:tickColorActive="@color/colorSlider"
+                app:trackColor="@color/colorBorder"
+                app:trackColorActive="@color/colorSlider"
+                app:trackColorInactive="@color/colorSlider"
+                app:values="@array/initial_milk_slider_values" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/shape_border"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/parameter_selection_meatVolume"
+                android:textColor="@color/colorTextBlack"
+                android:textSize="18sp" />
+
+
+            <com.google.android.material.slider.RangeSlider
+                android:id="@+id/cow_meat_volume"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:valueFrom="0.8"
+                android:valueTo="1.5"
+                app:thumbColor="@color/colorSlider"
+                app:thumbStrokeColor="@color/colorSlider"
+                app:tickColorActive="@color/colorSlider"
+                app:trackColor="@color/colorBorder"
+                app:trackColorActive="@color/colorSlider"
+                app:trackColorInactive="@color/colorSlider"
+                app:values="@array/initial_meat_slider_values" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/shape_border"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/parameter_selection_health"
+                android:textColor="@color/colorTextBlack"
+                android:textSize="18sp" />
+
+
+            <com.google.android.material.slider.RangeSlider
+                android:id="@+id/cow_health_slider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stepSize="1.0"
+                android:valueFrom="1.0"
+                android:valueTo="10.0"
+                app:thumbColor="@color/colorSlider"
+                app:thumbStrokeColor="@color/colorSlider"
+                app:tickColor="@color/colorBorder"
+                app:tickColorActive="@color/colorSlider"
+                app:trackColor="@color/colorBorder"
+                app:trackColorActive="@color/colorSlider"
+                app:trackColorInactive="@color/colorSlider"
+                app:values="@array/initial_health_slider_values" />
+
+        </LinearLayout>
+
+    </LinearLayout>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/searchScanButton"
+        android:id="@+id/searchPairButton"
+        style="@style/ButtonSolid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/ButtonSolid"
         android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="56dp"
         android:text="@string/search_by_tag_button" />
 
 </LinearLayout>

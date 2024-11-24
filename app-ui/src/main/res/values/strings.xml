@@ -54,6 +54,9 @@
     <string name="parameter_selection_milkVolume">Удой</string>
     <string name="parameter_selection_mass">Вес</string>
 
+    <!--Лучшие партнеры-->
+    <string name="best_partner_title">Мы нашли несколько кандидатов для спаривания</string>
+
     <!-- Все что ниже удалить -->
     
     <!--Регистрация-->

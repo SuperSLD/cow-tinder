@@ -29,6 +29,7 @@
 
     <color name="negativeButtonTextColor">#FB5020</color>
     <color name="colorPositiveMemberStatus">#BEFF7D</color>
+    <color name="colorSlider">#52784D</color>
 
     <color name="colorCardItemBackground">#3B5771</color>
 </resources>

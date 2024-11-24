@@ -9,8 +9,11 @@ import com.example.app_ui.R
 import com.example.app_ui.common.ARG_KEY_SCREEN_PARAMS
 import com.example.app_ui.common.core.base.BaseFragment
 import com.example.app_ui.common.core.base.addSystemTopPadding
-import com.example.app_ui.screens.cowcard.CowCardFragment
 import kotlinx.android.synthetic.main.fragment_cow_card.backArrow
+import kotlinx.android.synthetic.main.fragment_parameter_selection.cow_health_slider
+import kotlinx.android.synthetic.main.fragment_parameter_selection.cow_meat_volume
+import kotlinx.android.synthetic.main.fragment_parameter_selection.cow_milk_volume
+import kotlinx.android.synthetic.main.fragment_parameter_selection.searchPairButton
 import kotlinx.android.synthetic.main.fragment_parameter_selection.selectParameterSwitch
 import kotlinx.android.synthetic.main.fragment_search_by_tag.mainContainer
 import online.juter.supersld.view.input.selectors.JTHorizontalSwitch
@@ -58,6 +61,14 @@ class ParameterSelectionFragment: BaseFragment(R.layout.fragment_parameter_selec
             onTabChanged {
                 presenter.onMainParameterChange(it)
             }
+        }
+
+        searchPairButton.setOnClickListener {
+            presenter.onSearch(
+                milk = cow_milk_volume.values,
+                weight = cow_meat_volume.values,
+                health = cow_health_slider.values
+            )
         }
     }
 }
