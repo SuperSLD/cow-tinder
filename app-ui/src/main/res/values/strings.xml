@@ -46,6 +46,17 @@
     <!-- Подтверждение партнера -->
     <string name="confirm_partner_screen_title">Отсканируйте метку на корове, чтобы подтвердить ее данные</string>
 
+    <!-- Подтверждение партнера -->
+    <string name="parameter_selection_text">Основной параметр</string>
+    <string name="parameter_selection_button">Найти пару</string>
+    <string name="parameter_selection_meatVolume">Скорость набора веса</string>
+    <string name="parameter_selection_health">Здоровье</string>
+    <string name="parameter_selection_milkVolume">Удой</string>
+    <string name="parameter_selection_mass">Вес</string>
+
+    <!--Лучшие партнеры-->
+    <string name="best_partner_title">Мы нашли несколько кандидатов для спаривания</string>
+
     <!-- Карточка партнера -->
     <string name="pair_cow_card_title">Паспорт подходящей особи</string>
     <string name="pair_cow_card_result">Ожидаемый результат\nскрещивания</string>
