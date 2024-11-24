@@ -21,6 +21,8 @@ class SearchCouplePresenter: BasePresenter<SearchCoupleView>() {
     private val getAllCowsUseCase: GetAllCowsUseCase by inject()
     private var cowList: List<Cow> = listOf()
 
+    private var filter = ""
+
     fun onBack() = router?.exit()
 
     override fun attachView(view: SearchCoupleView?) {
@@ -34,6 +36,20 @@ class SearchCouplePresenter: BasePresenter<SearchCoupleView>() {
             cowList = withIO { getAllCowsUseCase() }
             viewState.showCowList(cowList)
             viewState.toggleLoading(false)
+        }
+    }
+
+    fun onFilterUpdate(filter: String) {
+        this.filter = filter
+        launchUI {
+            if (filter.isNotBlank()) {
+                val filteredList = withIO {
+                    cowList.filter { it.id.contains(filter) }
+                }
+                viewState.showCowList(filteredList)
+            } else {
+                viewState.showCowList(cowList)
+            }
         }
     }
 

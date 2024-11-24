@@ -11,8 +11,10 @@ import com.example.app_ui.common.core.base.BaseFragment
 import com.example.app_ui.common.core.base.addSystemBottomPadding
 import com.example.app_ui.common.view.simplerecycler.SimpleRecyclerAdapter
 import com.example.app_ui.ext.setVisible
+import com.example.app_ui.ext.textChanged
 import com.example.app_ui.screens.holders.SearchCoupleViewHolder
 import kotlinx.android.synthetic.main.fragment_search_couple.cowAdapter
+import kotlinx.android.synthetic.main.fragment_search_couple.cow_id_et
 import kotlinx.android.synthetic.main.fragment_search_couple.cow_list_container
 import kotlinx.android.synthetic.main.fragment_search_couple.cow_list_loading
 import kotlinx.android.synthetic.main.fragment_search_couple.toolbar
@@ -41,6 +43,8 @@ class SearchCoupleFragment: BaseFragment(R.layout.fragment_search_couple), Searc
             adapter = coupleAdapter
             layoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
         }
+
+        cow_id_et.textChanged { presenter.onFilterUpdate(it) }
     }
     override fun onBackPressed() {
         presenter.onBack()

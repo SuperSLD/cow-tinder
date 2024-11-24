@@ -140,13 +140,29 @@
 
     </LinearLayout>
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/searchPairButton"
-        style="@style/ButtonSolid"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
         android:layout_marginHorizontal="16dp"
-        android:layout_marginBottom="56dp"
-        android:text="@string/search_by_tag_button" />
+        android:layout_marginBottom="56dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/searchPairButton"
+            style="@style/ButtonSolid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/search_by_tag_button" />
+
+
+        <com.example.app_ui.common.view.JTProgressBarColored
+            android:id="@+id/progress"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
 
 </LinearLayout>

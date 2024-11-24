@@ -33,8 +33,9 @@ class ParameterSelectionPresenter(
                 health = health
             )
 
+            viewState.toggleLoading(true)
             val answer = withIO { findPairUseCase.invoke(tag = params.cowId, pairParams = cowPairData) }
-
+            viewState.toggleLoading(false)
             router?.navigateTo(
                 BestPartnerScreen(
                     cowPairResultList = answer,

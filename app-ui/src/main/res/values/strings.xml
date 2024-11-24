@@ -55,7 +55,7 @@
     <string name="parameter_selection_mass">Вес</string>
 
     <!--Лучшие партнеры-->
-    <string name="best_partner_title">Мы нашли несколько кандидатов для спаривания</string>
+    <string name="best_partner_title">Мы нашли несколько наиболее подходящих кандидатов для спаривания</string>
 
     <!-- Карточка партнера -->
     <string name="pair_cow_card_title">Паспорт подходящей особи</string>
