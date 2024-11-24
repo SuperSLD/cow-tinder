@@ -1,40 +1,25 @@
-package com.example.app_ui.screens.search_couple
+package com.example.app_ui.screens.best_partners
 
 import com.arellomobile.mvp.InjectViewState
 import com.example.app_domain.models.cow.Cow
-import com.example.app_domain.usecases.cow.GetAllCowsUseCase
 import com.example.app_ui.R
-import com.example.app_ui.common.core.base.launchUI
-import com.example.app_ui.common.core.base.withIO
-import com.example.app_ui.ext.createEmptyHandler
 import com.example.app_ui.screens.cowcard.CowCardNextAction
 import com.example.app_ui.screens.cowcard.CowCardScreen
 import com.example.app_ui.screens.parameter_selection.ParameterSelectionScreen
 import com.example.app_ui.screens.success.InstructionNextAction
 import com.example.app_ui.screens.success.InstructionScreen
 import online.jutter.supersld.common.base.BasePresenter
-import org.koin.core.inject
 
 @InjectViewState
-class SearchCouplePresenter: BasePresenter<SearchCoupleView>() {
-
-    private val getAllCowsUseCase: GetAllCowsUseCase by inject()
-    private var cowList: List<Cow> = listOf()
+class BestPartnersPresenter(
+    private val params: BestPartnerScreen
+): BasePresenter<BestPartnerView>() {
 
     fun onBack() = router?.exit()
 
-    override fun attachView(view: SearchCoupleView?) {
+    override fun attachView(view: BestPartnerView?) {
         super.attachView(view)
-        loadContent()
-    }
-
-    private fun loadContent() {
-        launchUI(createEmptyHandler()) {
-            viewState.toggleLoading(true)
-            cowList = withIO { getAllCowsUseCase() }
-            viewState.showCowList(cowList)
-            viewState.toggleLoading(false)
-        }
+        viewState.showCowList(params.cowPairResultList.map { it.otherCow })
     }
 
     fun onCowClick(cow: Cow) {
