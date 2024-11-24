@@ -9,6 +9,7 @@ import com.example.app_ui.common.core.base.withIO
 import com.example.app_ui.ext.createEmptyHandler
 import com.example.app_ui.screens.cowcard.CowCardNextAction
 import com.example.app_ui.screens.cowcard.CowCardScreen
+import com.example.app_ui.screens.parameter_selection.ParameterSelectionScreen
 import com.example.app_ui.screens.success.InstructionNextAction
 import com.example.app_ui.screens.success.InstructionScreen
 import online.jutter.supersld.common.base.BasePresenter
@@ -45,8 +46,8 @@ class SearchCouplePresenter: BasePresenter<SearchCoupleView>() {
                     subtitleRes = R.string.confirm_partner_screen_title,
                     buttonRes = R.string.search_by_tag_button_scan,
                     iconRes = R.drawable.tag,
-                    nextAction = InstructionNextAction.BACK,
-                    nextScreen = null
+                    nextAction = InstructionNextAction.NEXT,
+                    nextScreen = ParameterSelectionScreen(cow.id)
                 )
             )
         )
