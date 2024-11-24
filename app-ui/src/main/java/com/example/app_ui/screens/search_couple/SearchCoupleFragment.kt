@@ -8,6 +8,7 @@ import com.arellomobile.mvp.presenter.InjectPresenter
 import com.example.app_domain.models.cow.Cow
 import com.example.app_ui.R
 import com.example.app_ui.common.core.base.BaseFragment
+import com.example.app_ui.common.core.base.addSystemBottomPadding
 import com.example.app_ui.common.view.simplerecycler.SimpleRecyclerAdapter
 import com.example.app_ui.ext.setVisible
 import com.example.app_ui.screens.holders.SearchCoupleViewHolder
@@ -36,6 +37,7 @@ class SearchCoupleFragment: BaseFragment(R.layout.fragment_search_couple), Searc
         )
 
         with(cowAdapter) {
+            addSystemBottomPadding()
             adapter = coupleAdapter
             layoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
         }

@@ -11,5 +11,5 @@ interface CowNetRepository {
 
     suspend fun getCowInfo(id: String): Cow
 
-    suspend fun findPair(id: String, findParams: CowPairData): CowPairResult
+    suspend fun findPair(id: String, findParams: CowPairData): List<CowPairResult>
 }
